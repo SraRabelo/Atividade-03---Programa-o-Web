@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+    <link rel="stylesheet" href="Exercicio03.css" type="text/css">
+    <script>
+        function calcularDobro() {
+            // Lê o valor inserido pelo usuário
+            let valor1 = parseFloat(document.getElementById('valor1').value);
+            
+            // Verifica se o valor é válido
+            if (isNaN(valor1)) {
+                alert("Por favor, insira um número válido.");
+                return;
+            }
+
+            // Calcula o dobro do número
+            let dobro = valor1 * 2;
+
+            // Mostra um alerta com o dobro
+            alert("O dobro de " + valor1 + " é " + dobro + ".");
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcular o Dobro de um Número</h1>
+    <form action="" method="post" onsubmit="event.preventDefault(); calcularDobro();">
+        <div>
+            <strong>Valor 1:</strong>
+            <input id="valor1" type="text" name="valor1" class="ok" />
+        </div>
+
+        <div>
+            <button id="botao" type="submit">Calcular Dobro</button>
+        </div>
+    </form>
+</body>
+</html>

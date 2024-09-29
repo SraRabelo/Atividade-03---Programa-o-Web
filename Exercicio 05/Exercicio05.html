@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+    <link rel="stylesheet" href="Exercicio05.css" type="text/css">
+    <script>
+        function calcularQuadrado() {
+            // Lê o valor inserido pelo usuário
+            let valor = parseFloat(document.getElementById('valor1').value);
+            
+            // Verifica se o valor é válido
+            if (isNaN(valor)) {
+                alert("Por favor, insira um número válido.");
+                return;
+            }
+
+            // Calcula o quadrado do número
+            let quadrado = valor * valor;
+
+            // Exibe o resultado
+            alert("O quadrado de " + valor + " é " + quadrado + ".");
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcular o Quadrado de um Número</h1>
+
+    <form action="" method="post" class="formato" onsubmit="event.preventDefault(); calcularQuadrado();">
+        <div class="valor1">
+            <strong>Valor:</strong>
+            <input id="valor1" type="text" name="valor1" class="ok" />
+        </div>
+
+        <div>
+            <button id="botao" type="submit">Calcular</button>
+        </div>
+    </form>
+</body>
+</html>

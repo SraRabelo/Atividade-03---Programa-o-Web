@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+    <link rel="stylesheet" href="Exercicio06.css" type="text/css">
+    <script>
+        function calcularMedia() {
+            // Lê as notas inseridas pelo usuário
+            let nota1 = parseFloat(document.getElementById('valor1').value);
+            let nota2 = parseFloat(document.getElementById('valor2').value);
+            let nota3 = parseFloat(document.getElementById('valor3').value);
+
+            // Verifica se as notas são válidas
+            if (isNaN(nota1) || isNaN(nota2) || isNaN(nota3)) {
+                alert("Por favor, insira três notas válidas.");
+                return;
+            }
+
+            // Calcula a média
+            let media = (nota1 + nota2 + nota3) / 3;
+
+            // Exibe o resultado
+            alert("A média das notas é " + media.toFixed(2) + ".");
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcular a Média de Três Notas</h1>
+
+    <form action="" method="post" class="formato" onsubmit="event.preventDefault(); calcularMedia();">
+        <div class="valor1">
+            <strong>Nota 1:</strong>
+            <input id="valor1" type="text" name="valor1" class="ok" />
+        </div>
+
+        <div class="valor2">
+            <strong>Nota 2:</strong>
+            <input id="valor2" type="text" name="valor2" class="ok" />
+        </div>
+
+        <div class="valor3">
+            <strong>Nota 3:</strong>
+            <input id="valor3" type="text" name="valor3" class="ok" />
+        </div>
+
+        <div>
+            <button id="botao" type="submit">Calcular Média</button>
+        </div>
+    </form> 
+</body>
+</html>

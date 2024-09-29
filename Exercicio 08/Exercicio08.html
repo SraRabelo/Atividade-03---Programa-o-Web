@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 08</title>
+    <link rel="stylesheet" href="Exercicio08.css" type="text/css">
+    <script>
+        function calcularArea() {
+            let base = parseFloat(document.getElementById('valor1').value);
+            let altura = parseFloat(document.getElementById('valor2').value);
+
+            if (isNaN(base) || isNaN(altura)) {
+                alert("Por favor, insira valores válidos para base e altura.");
+                return;
+            }
+
+            let area = (base * altura) / 2;
+            alert("A área do triângulo é: " + area);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcular Área do Triângulo</h1>
+
+    <form action="" method="post" class="formato" onsubmit="event.preventDefault(); calcularArea();">
+        <div>
+            <strong>Base:</strong>
+            <input id="valor1" type="text" name="valor1" class="ok" />
+        </div>
+
+        <div>
+            <strong>Altura:</strong>
+            <input id="valor2" type="text" name="valor2" class="ok" />
+        </div>
+
+        <div>
+            <button id="botao" type="submit">Calcular Área</button>
+        </div>
+    </form>
+</body>
+</html>

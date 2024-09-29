@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07</title>
+    <link rel="stylesheet" href="Exercicio07.css" type="text/css">
+    <script>
+        function calcularSoma() {
+            let numero1 = parseInt(document.getElementById('numero1').value);
+            let numero2 = parseInt(document.getElementById('numero2').value);
+            let numero3 = parseInt(document.getElementById('numero3').value);
+
+            if (isNaN(numero1) || isNaN(numero2) || isNaN(numero3)) {
+                alert("Por favor, insira três números inteiros válidos.");
+                return;
+            }
+
+            let soma = numero1 + numero2 + numero3;
+            alert("A soma dos números é " + soma + ".");
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcular a Soma de Três Números</h1>
+
+    <form action="" method="post" class="formato" onsubmit="event.preventDefault(); calcularSoma();">
+        <div>
+            <strong>Número 1:</strong>
+            <input id="numero1" type="text" name="numero1" class="ok" />
+        </div>
+
+        <div>
+            <strong>Número 2:</strong>
+            <input id="numero2" type="text" name="numero2" class="ok" />
+        </div>
+
+        <div>
+            <strong>Número 3:</strong>
+            <input id="numero3" type="text" name="numero3" class="ok" />
+        </div>
+
+        <div>
+            <button id="botao" type="submit">Calcular Soma</button>
+        </div>
+    </form>
+</body>
+</html>

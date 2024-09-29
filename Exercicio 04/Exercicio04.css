@@ -1,0 +1,20 @@
+.formato{
+    border: double, 22px, red;
+    font-family: verdana;
+    font-size: 18pt;
+    margin-left: 10px;
+    margin-right: 0;
+    width: 450px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.ok{
+    font-family: verdana;
+    font-size: 18pt;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    background-color: yellow;  
+    
+}

@@ -1,0 +1,71 @@
+/* Estilo geral do corpo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+    background-color: #eef2f3; /* Cor de fundo suave */
+    margin: 0; /* Remove margens padrão */
+    padding: 20px; /* Espaçamento ao redor do conteúdo */
+    display: flex; /* Usar flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa toda a altura da tela */
+}
+
+/* Estilo do cabeçalho */
+h1 {
+    color: #333; /* Cor do texto do cabeçalho */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+    margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
+}
+
+/* Estilo do formulário */
+form {
+    background: linear-gradient(135deg, #ffffff, #d7e1ec); /* Fundo com gradiente suave */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 350px; /* Largura fixa do formulário */
+}
+
+/* Estilo dos rótulos e campos de entrada */
+strong {
+    display: block; /* Faz o rótulo ocupar toda a linha */
+    margin-bottom: 8px; /* Espaço abaixo do rótulo */
+    color: #555; /* Cor do rótulo */
+    font-size: 18px; /* Tamanho da fonte do rótulo */
+}
+
+input[type="text"] {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 12px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaço abaixo do campo */
+    border: 2px solid #007bff; /* Borda azul */
+    border-radius: 6px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: border-color 0.3s; /* Efeito de transição para mudança de borda */
+}
+
+input[type="text"]:focus {
+    border-color: #0056b3; /* Cor da borda ao focar no campo */
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilo do botão */
+button {
+    background-color: #28a745; /* Cor de fundo verde */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 12px 18px; /* Espaçamento interno do botão */
+    border-radius: 6px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s, transform 0.2s; /* Efeito de transição para mudança de cor e transformação */
+}
+
+button:hover {
+    background-color: #218838; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Eleva o botão levemente ao passar o mouse */
+}
+
+button:active {
+    transform: translateY(0); /* Retorna à posição original ao clicar */
+}

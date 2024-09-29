@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 09</title>
+    <link rel="stylesheet" href="Exercicio09.css" type="text/css">
+    <script>
+        function calcularIdade() {
+            const nome = document.getElementById('nome').value;
+            const anoNascimento = parseInt(document.getElementById('anoNascimento').value);
+            const anoAtual = parseInt(document.getElementById('anoAtual').value);
+
+            if (isNaN(anoNascimento) || isNaN(anoAtual)) {
+                alert("Por favor, insira valores válidos para ano de nascimento e ano atual.");
+                return;
+            }
+
+            const idade = anoAtual - anoNascimento;
+
+            // Exibe o nome e a idade em linhas separadas
+            alert("Nome: " + nome + "\nIdade: " + idade);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calcular Idade</h1>
+
+    <form action="" method="post" class="formato" onsubmit="event.preventDefault(); calcularIdade();">
+        <div>
+            <strong>Nome:</strong>
+            <input id="nome" type="text" name="nome" class="ok" required />
+        </div>
+
+        <div>
+            <strong>Ano de Nascimento:</strong>
+            <input id="anoNascimento" type="text" name="anoNascimento" class="ok" required />
+        </div>
+
+        <div>
+            <strong>Ano Atual:</strong>
+            <input id="anoAtual" type="text" name="anoAtual" class="ok" required />
+        </div>
+
+        <div>
+            <button id="botao" type="submit">Calcular</button>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 03</title>
+    <link rel="stylesheet" href="Exercicio04.css" type="text/css" />
+    <script>
+        function calcularOperacao() {
+            // Lê os valores inseridos pelo usuário
+            let valor1 = parseFloat(document.getElementById('valor1').value);
+            let valor2 = parseFloat(document.getElementById('valor2').value);
+            let resultado;
+
+            // Verifica se os valores são válidos
+            if (isNaN(valor1) || isNaN(valor2)) {
+                alert("Por favor, insira dois números válidos.");
+                return;
+            }
+
+            // Verifica qual operação foi selecionada
+            let operacao;
+            if (document.getElementById('soma').checked) {
+                operacao = 'soma';
+            } else if (document.getElementById('sub').checked) {
+                operacao = 'subtracao';
+            } else if (document.getElementById('mult').checked) {
+                operacao = 'multiplicacao';
+            } else if (document.getElementById('divisao').checked) {
+                operacao = 'divisao';
+            } else {
+                alert("Por favor, selecione uma operação.");
+                return;
+            }
+
+            // Realiza a operação de acordo com a seleção
+            if (operacao === 'soma') {
+                resultado = valor1 + valor2;
+            } else if (operacao === 'subtracao') {
+                resultado = valor1 - valor2;
+            } else if (operacao === 'multiplicacao') {
+                resultado = valor1 * valor2;
+            } else if (operacao === 'divisao') {
+                if (valor2 === 0) {
+                    alert("Divisão por zero não é permitida.");
+                    return;
+                }
+                resultado = valor1 / valor2;
+            }
+
+            // Exibe o resultado no campo de texto
+            document.getElementById('resultado').value = resultado;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" method="post" class="formato" onsubmit="event.preventDefault(); calcularOperacao();">
+        <div class="valor1">
+            <strong>Valor 1:</strong>
+            <input id="valor1" type="text" name="valor1" class="ok" />
+        </div>
+
+        <div class="valor2">
+            <strong>Valor 2:</strong>
+            <input id="valor2" type="text" name="valor2" class="ok" />
+        </div>
+
+        <div>
+            <div class="opcao"><strong>Opções:</strong></div>
+            <input type="radio" name="calculo" id="soma"> SOMA<br>
+            <input type="radio" name="calculo" id="sub"> SUBTRAÇÃO<br>
+            <input type="radio" name="calculo" id="mult"> MULTIPLICAÇÃO<br>
+            <input type="radio" name="calculo" id="divisao"> DIVISÃO<br>
+        </div>
+
+        <div>
+            <div class="resultado"><strong>Resultado :</strong></div>
+            <input id="resultado" type="text" name="resultado" class="ok" readonly />
+        </div>
+
+        <div>
+            <button id="botao" type="submit">Calcular</button>
+        </div>
+    </form>
+</body>
+
+</html>

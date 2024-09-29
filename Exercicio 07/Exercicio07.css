@@ -1,0 +1,58 @@
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    margin: 0; /* Remove margens padrão */
+    padding: 20px; /* Espaçamento ao redor do conteúdo */
+    display: flex; /* Usar flexbox para centralizar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa toda a altura da tela */
+}
+
+/* Estilo do cabeçalho */
+h1 {
+    color: #333; /* Cor do texto do cabeçalho */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+/* Estilo do formulário */
+form {
+    background: #fff; /* Fundo branco para o formulário */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 300px; /* Largura fixa do formulário */
+}
+
+/* Estilo dos rótulos e campos de entrada */
+strong {
+    display: block; /* Faz o rótulo ocupar toda a linha */
+    margin-bottom: 5px; /* Espaço abaixo do rótulo */
+    color: #555; /* Cor do rótulo */
+}
+
+input[type="text"] {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Espaço abaixo do campo */
+    border: 1px solid #ddd; /* Borda suave */
+    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo do botão */
+button {
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 10px 15px; /* Espaçamento interno do botão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Efeito de transição para mudança de cor */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
